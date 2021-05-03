@@ -26,7 +26,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.4</version>
                 <configuration>
-                    <mainClass>com.mycompany.universityhalls.App</mainClass>
+                    <mainClass>com.mycompany.universityhalls.UniversityHallsTest</mainClass>
                 </configuration>
                 <executions>
                     <execution>
