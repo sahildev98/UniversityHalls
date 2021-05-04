@@ -12,8 +12,8 @@ import java.util.Date;
  * @author Sahil
  */
 public class Person {
-    String name;
-    Date dateofBirth;
-    String phoneNum;
-    int ID;
+    private String name;
+    private Date dateofBirth;
+    private String phoneNum;
+    private int ID;
 }
