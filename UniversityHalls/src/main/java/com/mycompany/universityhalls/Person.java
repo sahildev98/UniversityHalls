@@ -55,4 +55,12 @@ public class Person {
     public void setNationality(String newNationality){
         newNationality = nationality;
     }
+    
+    public Date getDateOfBirth(){
+        return dateOfBirth;
+    }
+    
+    public void setDateOfBirth(Date newDateOfBirth){
+        newDateOfBirth = dateOfBirth;
+    }
 }
