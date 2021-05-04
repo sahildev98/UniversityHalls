@@ -39,4 +39,12 @@ public class Person {
     public void setName(String newName){
         newName = name;
     }
+    
+    public String getGender(){
+        return gender;
+    }
+    
+    public void setGender(String newGender){
+        newGender = gender;
+    }
 }
