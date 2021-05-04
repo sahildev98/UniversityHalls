@@ -71,4 +71,12 @@ public class Person {
     public void setPhoneNum(String newNum){
         newNum = phoneNum;
     }
+    
+    public int getID (){
+        return ID;
+    }
+    
+    public void setID(int newID){
+        newID = ID;
+    }
 }
