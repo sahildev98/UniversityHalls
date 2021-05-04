@@ -31,7 +31,7 @@ public class Person {
         this.ID = ID;
         this.healthConditions = healthConditions;
     } 
-    
+    // Getters and Setters to allow access to all classes that inherits this class.
     public String getName(){
         return name;
     }
