@@ -16,4 +16,8 @@ public class Person {
     private Date dateofBirth;
     private String phoneNum;
     private int ID;
+    
+    public Person(){
+        
+    }
 }
