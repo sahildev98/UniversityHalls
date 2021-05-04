@@ -12,12 +12,17 @@ import java.util.Date;
  * @author Sahil
  */
 public class Person {
+    // Private variables created to only allow classes that inherits this class alone. 
+    // Also to achieve escapsluation. 
     private String name;
-    private Date dateofBirth;
+    private Date dateOfBirth;
     private String phoneNum;
     private int ID;
     
-    public Person(){
-        
-    }
+    public Person(String name, Date dateOfbirth, String phoneNum, int ID){
+        this.name = name;
+        this.dateOfBirth = dateOfbirth;
+        this.phoneNum = phoneNum;
+        this.ID = ID;
+    }   
 }
