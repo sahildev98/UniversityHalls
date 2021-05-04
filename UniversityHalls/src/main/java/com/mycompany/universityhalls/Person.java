@@ -47,4 +47,12 @@ public class Person {
     public void setGender(String newGender){
         newGender = gender;
     }
+    
+    public String getNationality(){
+        return nationality;
+    }
+    
+    public void setNationality(String newNationality){
+        newNationality = nationality;
+    }
 }
