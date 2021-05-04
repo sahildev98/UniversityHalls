@@ -5,10 +5,15 @@
  */
 package com.mycompany.universityhalls;
 
+import java.util.Date;
+
 /**
  *
  * @author Sahil
  */
 public class Person {
-    
+    String name;
+    Date dateofBirth;
+    String phoneNum;
+    int ID;
 }
