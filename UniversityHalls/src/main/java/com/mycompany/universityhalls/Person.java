@@ -79,4 +79,12 @@ public class Person {
     public void setID(int newID){
         newID = ID;
     }
+    
+    public String getHealthConditions(){
+        return healthConditions;
+    }
+    
+    public void setHealthConditions(String newHealthConditions){
+        newHealthConditions = healthConditions;
+    }
 }
