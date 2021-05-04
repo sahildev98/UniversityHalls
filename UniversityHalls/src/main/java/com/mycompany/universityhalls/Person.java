@@ -16,15 +16,17 @@ public class Person {
     // Also to achieve escapsluation. 
     private String name;
     private String gender;
+    private String address;
     private String nationality;
     private Date dateOfBirth;
     private String phoneNum;
     private int ID;
     private String healthConditions;
      // Constructor is a method used to initiaise objects i.e students entering details. 
-    public Person(String name,String gender, String nationality, Date dateOfbirth, String phoneNum, int ID, String healthConditions){
+    public Person(String name,String gender, String address, String nationality, Date dateOfbirth, String phoneNum, int ID, String healthConditions){
         this.name = name;
         this.gender = gender;
+        this.address = address;
         this.nationality = nationality;
         this.dateOfBirth = dateOfbirth;
         this.phoneNum = phoneNum;
@@ -46,6 +48,14 @@ public class Person {
     
     public void setGender(String newGender){
         newGender = gender;
+    }
+    
+    public String address(){
+        return address;
+    }
+    
+    public void setAddress(String newAddress){
+        newAddress = address;
     }
     
     public String getNationality(){
