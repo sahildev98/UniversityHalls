@@ -30,5 +30,13 @@ public class Person {
         this.phoneNum = phoneNum;
         this.ID = ID;
         this.healthConditions = healthConditions;
-    }   
+    } 
+    
+    public String getName(){
+        return name;
+    }
+    
+    public void setName(String newName){
+        newName = name;
+    }
 }
