@@ -63,4 +63,12 @@ public class Person {
     public void setDateOfBirth(Date newDateOfBirth){
         newDateOfBirth = dateOfBirth;
     }
+    
+    public String getPhoneNum(){
+        return phoneNum;
+    }
+    
+    public void setPhoneNum(String newNum){
+        newNum = phoneNum;
+    }
 }
