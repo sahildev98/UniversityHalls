@@ -11,7 +11,7 @@ import java.util.Date;
  *
  * @author Sahil
  */
-public class Person {
+public abstract class Person {
     // Private variables created to only allow classes that inherits this class alone. 
     // Also to achieve escapsluation. 
     private String name;
