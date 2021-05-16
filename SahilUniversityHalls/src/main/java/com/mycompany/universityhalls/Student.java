@@ -5,6 +5,7 @@
  */
 package com.mycompany.universityhalls;
 
+import java.text.SimpleDateFormat;
 import java.util.Date;
 
 /**
@@ -30,5 +31,7 @@ public class Student extends Person {
      */
     public void setDate(Date newDate){
         newDate = yearOfStudy;
+        SimpleDateFormat firstYearFormat = new SimpleDateFormat("yyyy");
+        SimpleDateFormat secondYearFormat = new SimpleDateFormat("yyyy");
     }
 }
