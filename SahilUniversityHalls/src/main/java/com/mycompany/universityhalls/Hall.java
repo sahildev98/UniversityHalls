@@ -13,4 +13,10 @@ import java.util.ArrayList;
  */
 public class Hall {
     private ArrayList <Student>hallsToStay;
+    public final int MAX;
+    
+    public Hall(int maxIn){
+        hallsToStay = new ArrayList<>();
+        MAX = maxIn;
+    }
 }
