@@ -14,7 +14,8 @@ import java.util.Date;
 public abstract class Person {
     // Private variables created to only allow classes that inherits this class alone. 
     // Also to achieve escapsluation. 
-    private String name;
+    private String forename;
+    private String surname;
     private String gender;
     private String address;
     private String nationality;
@@ -23,8 +24,9 @@ public abstract class Person {
     private int ID;
     private String healthConditions;
      // Constructor is a method used to initiaise objects i.e students entering details. 
-    public Person(String name,String gender, String address, String nationality, Date dateOfbirth, String phoneNum, int ID, String healthConditions){
-        this.name = name;
+    public Person(String forename,String surname,String gender, String address, String nationality, Date dateOfbirth, String phoneNum, int ID, String healthConditions){
+        this.forename = forename;
+        this.surname = surname;
         this.gender = gender;
         this.address = address;
         this.nationality = nationality;
@@ -34,12 +36,20 @@ public abstract class Person {
         this.healthConditions = healthConditions;
     } 
     // Getters and Setters to allow access to all classes that inherits this class.
-    public String getName(){
-        return name;
+    public String getForeName(){
+        return forename;
     }
     
-    public void setName(String newName){
-        newName = name;
+    public void setForeName(String newForeName){
+        newForeName = forename;
+    }
+    
+    public String getSurname(){
+        return surname;
+    }
+    
+    public void setSurname(String newSurname){
+        newSurname = surname;
     }
     
     public String getGender(){
