@@ -19,9 +19,13 @@ public class UniversityHallsTest extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
+        // Vbox Created
         VBox root = new VBox(10);
+        // add nodes to the Vbox
         root.getChildren();
+        // Create the Scene
         Scene scene = new Scene(root, Color.web("#ffffff"));
+        // set scene with title and with stage used to display application
         stage.setScene(scene);
         stage.setTitle("SA Student Halls");
        stage.show(); 
