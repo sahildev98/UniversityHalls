@@ -5,10 +5,12 @@
  */
 package com.mycompany.universityhalls;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author Sahil
  */
 public class Hall {
-    
+    private ArrayList <Student>hallsToStay;
 }
