@@ -19,4 +19,9 @@ public class Hall {
         hallsToStay = new ArrayList<>();
         MAX = maxIn;
     }
+    
+    
+    public boolean isEmpty(){
+        return hallsToStay.isEmpty();
+    }
 }
