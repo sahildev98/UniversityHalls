@@ -61,6 +61,8 @@ public class UniversityHallsTest extends Application {
         VBox root = new VBox(10);
         // add nodes to the VBox
         root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,hallLbl);
+        // set min and max to componenents in GUI
+        addressField.setMaxSize(200,400);
         // Create the Scene
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
