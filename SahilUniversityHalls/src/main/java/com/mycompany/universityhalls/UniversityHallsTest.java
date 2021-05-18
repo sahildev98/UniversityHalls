@@ -17,7 +17,7 @@ import javafx.scene.paint.Color;
  * JavaFX App
  */
 public class UniversityHallsTest extends Application {
-
+    private Hall hallsToStay;
     // components
     private Label headingLbl = new Label("Rent Student Hall Room");
     private Label studentDetails = new Label("Enter Student details");
@@ -45,6 +45,7 @@ public class UniversityHallsTest extends Application {
     private Separator sectSepator3 = new Separator();
     @Override
     public void start(Stage stage) throws IOException {
+        hallsToStay = new Hall(20);
         // Vbox Created
         VBox root = new VBox(10);
         // add nodes to the Vbox
