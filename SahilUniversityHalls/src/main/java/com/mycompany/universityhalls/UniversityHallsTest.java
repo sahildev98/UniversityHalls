@@ -42,7 +42,7 @@ public class UniversityHallsTest extends Application {
     private Label idLbl = new Label("Student ID:");
     private TextField idField = new TextField();
     private Label healthLbl = new Label("Health Conditions");
-    private TextField healthField = new TextField();
+    private TextArea healthField = new TextArea();
     private Separator sectSepator = new Separator(); 
     private Separator sectSepator2 = new Separator();
     private Separator sectSepator3 = new Separator();   
@@ -62,9 +62,10 @@ public class UniversityHallsTest extends Application {
         VBox root = new VBox(10);
         // add nodes to the VBox
         root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,
-        studentDetails3,hallLbl);
+        studentDetails3,sectSepator3,hallLbl);
         // set min and max to componenents in GUI
         addressField.setMaxSize(200,400);
+        healthField.setMaxSize(200,400);
         // Create the Scene
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
