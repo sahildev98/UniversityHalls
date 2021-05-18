@@ -20,8 +20,16 @@ public class Hall {
         MAX = maxIn;
     }
     
-    
+   
     public boolean isEmpty(){
         return hallsToStay.isEmpty();
+    }
+    
+    /**
+     *
+     * @return true if the list is empty and false otherwise
+     */
+    public boolean isFull(){
+        return hallsToStay.size()==MAX;
     }
 }
