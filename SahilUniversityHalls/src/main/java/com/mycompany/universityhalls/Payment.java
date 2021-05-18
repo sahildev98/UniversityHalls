@@ -10,5 +10,11 @@ package com.mycompany.universityhalls;
  * @author Sahil
  */
 public class Payment {
+    double rent;
+
+    public Payment(double rent) {
+        this.rent = rent;
+    }
+    
     
 }
