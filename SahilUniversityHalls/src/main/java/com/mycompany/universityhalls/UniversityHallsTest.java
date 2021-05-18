@@ -10,6 +10,7 @@ import java.io.IOException;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.control.TextField;
+import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
 import javafx.scene.paint.Color;
 
@@ -46,6 +47,10 @@ public class UniversityHallsTest extends Application {
     @Override
     public void start(Stage stage) throws IOException {
         hallsToStay = new Hall(20);
+        // horizontal boxes for student details and hall details
+        HBox studentDetails = new HBox(10);
+        HBox hallDetails = new HBox(10);
+        
         // Vbox Created
         VBox root = new VBox(10);
         // add nodes to the Vbox
