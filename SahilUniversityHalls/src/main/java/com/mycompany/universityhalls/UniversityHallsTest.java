@@ -22,7 +22,7 @@ public class UniversityHallsTest extends Application {
     // components
     private Label headingLbl = new Label("Rent Student Hall Room");
     private Label studentLbl = new Label("Student details");
-    private Label hallLbl = new Label ("Hotel Details");
+    private Label hallLbl = new Label ("Hall Details");
     private Label forenameLbl = new Label("Forename:");
     private TextField forenameField = new TextField();
     private Label surnamelbl = new Label("Surname:");
