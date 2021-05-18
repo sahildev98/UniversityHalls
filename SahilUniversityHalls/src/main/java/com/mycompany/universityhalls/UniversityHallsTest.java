@@ -35,8 +35,9 @@ public class UniversityHallsTest extends Application {
     private Label nationalLbl = new Label("Nationality:");
     private TextField nationalField = new TextField();
     private Label studyDateLbl = new Label("Date of Study");
-//    private 
-    private Label dobLbl = new Label("Date of birth:");
+    private TextField studyDateField = new TextField();
+    private Label dobLbl = new Label("Date of birth:\n (dd/MM/yyyy)");
+    private TextField dobField = new TextField();
     private Label phoneNumLbl = new Label("Contact Number:");
     private TextField phoneNumField = new TextField();
     private Label idLbl = new Label("Student ID:");
@@ -56,8 +57,8 @@ public class UniversityHallsTest extends Application {
         HBox hallDetails = new HBox(10);
         // add entry components to Hboxes 
         studentDetails.getChildren().addAll(forenameLbl,forenameField,surnamelbl,surnameField,studentGender,genderField);
-        studentDetails2.getChildren().addAll(studentAddress,addressField,phoneNumLbl,phoneNumField,nationalLbl,nationalField);
-        studentDetails3.getChildren().addAll(studyDateLbl,idLbl,idField,healthLbl,healthField);
+        studentDetails2.getChildren().addAll(dobLbl,dobField,studentAddress,addressField,phoneNumLbl,phoneNumField,nationalLbl,nationalField);
+        studentDetails3.getChildren().addAll(studyDateLbl,studyDateField,idLbl,idField,healthLbl,healthField);
         // Vbox Created
         VBox root = new VBox(10);
         // add nodes to the VBox
