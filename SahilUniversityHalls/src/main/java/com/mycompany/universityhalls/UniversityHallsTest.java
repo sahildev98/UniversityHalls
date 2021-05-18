@@ -21,7 +21,8 @@ public class UniversityHallsTest extends Application {
     private Hall hallsToStay;
     // components
     private Label headingLbl = new Label("Rent Student Hall Room");
-    private Label studentDetails = new Label("Enter Student details");
+    private Label studentLbl = new Label("Student details");
+    private Label hallLbl = new Label ("Hotel Details");
     private Label forenameLbl = new Label("Forename:");
     private TextField forenameField = new TextField();
     private Label surnamelbl = new Label("Surname:");
@@ -50,11 +51,11 @@ public class UniversityHallsTest extends Application {
         // horizontal boxes for student details and hall details
         HBox studentDetails = new HBox(10);
         HBox hallDetails = new HBox(10);
-        
+
         // Vbox Created
         VBox root = new VBox(10);
-        // add nodes to the Vbox
-        root.getChildren();
+        // add nodes to the VBox
+        root.getChildren().addAll(headingLbl,sectSepator,studentLbl,sectSepator2,hallLbl);
         // Create the Scene
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
