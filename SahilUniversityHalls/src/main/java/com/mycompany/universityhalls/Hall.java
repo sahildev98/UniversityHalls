@@ -27,7 +27,7 @@ public class Hall {
     
     /**
      *
-     * @return true if the list is empty and false otherwise
+     * @return true if the list is full and false otherwise.
      */
     public boolean isFull(){
         return hallsToStay.size()==MAX;
