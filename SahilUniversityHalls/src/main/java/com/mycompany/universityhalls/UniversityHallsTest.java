@@ -9,6 +9,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.VBox;
@@ -30,7 +31,7 @@ public class UniversityHallsTest extends Application {
     private Label studentGender = new Label("Gender:");
     private TextField genderField = new TextField();
     private Label studentAddress = new Label("Address:");
-    private TextField addressField = new TextField();
+    private TextArea addressField = new TextArea();
     private Label nationalLbl = new Label("Nationality:");
     private TextField nationalField = new TextField();
     private Label studyDateLbl = new Label("Date of Study");
@@ -44,22 +45,22 @@ public class UniversityHallsTest extends Application {
     private TextField healthField = new TextField();
     private Separator sectSepator = new Separator(); 
     private Separator sectSepator2 = new Separator();
-    private Separator sectSepator3 = new Separator();
+    private Separator sectSepator3 = new Separator();   
     @Override
     public void start(Stage stage) throws IOException {
         hallsToStay = new Hall(20);
         // horizontal boxes for student details and hall details
         HBox studentDetails = new HBox(10);
+        HBox studentDetails2 = new HBox(10);
         HBox hallDetails = new HBox(10);
         // add entry components to Hboxes 
-        studentDetails.getChildren().addAll(forenameLbl,forenameField,surnamelbl,surnameField,studentGender,genderField,
-        studentAddress,addressField,nationalLbl,nationalField,studyDateLbl,dobLbl,phoneNumLbl,phoneNumField,
-        idLbl,idField,healthLbl,healthField);
-
+        studentDetails.getChildren().addAll(forenameLbl,forenameField,surnamelbl,surnameField,studentGender,genderField);
+        studentDetails2.getChildren().addAll(studentAddress,addressField,phoneNumLbl,phoneNumField,nationalLbl,nationalField);
+        
         // Vbox Created
         VBox root = new VBox(10);
         // add nodes to the VBox
-        root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,hallLbl);
+        root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,hallLbl);
         // Create the Scene
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
