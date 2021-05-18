@@ -18,7 +18,7 @@ import javafx.scene.paint.Color;
  */
 public class UniversityHallsTest extends Application {
 
-    // componenets 
+    // components
     private Label headingLbl = new Label("Rent Student Hall Room");
     private Label studentDetails = new Label("Enter Student details");
     private Label forenameLbl = new Label("Forename:");
