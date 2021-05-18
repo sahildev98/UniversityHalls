@@ -52,15 +52,17 @@ public class UniversityHallsTest extends Application {
         // horizontal boxes for student details and hall details
         HBox studentDetails = new HBox(10);
         HBox studentDetails2 = new HBox(10);
+        HBox studentDetails3 = new HBox(10);
         HBox hallDetails = new HBox(10);
         // add entry components to Hboxes 
         studentDetails.getChildren().addAll(forenameLbl,forenameField,surnamelbl,surnameField,studentGender,genderField);
         studentDetails2.getChildren().addAll(studentAddress,addressField,phoneNumLbl,phoneNumField,nationalLbl,nationalField);
-        
+        studentDetails3.getChildren().addAll(studyDateLbl,idLbl,idField,healthLbl,healthField);
         // Vbox Created
         VBox root = new VBox(10);
         // add nodes to the VBox
-        root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,hallLbl);
+        root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,
+        studentDetails3,hallLbl);
         // set min and max to componenents in GUI
         addressField.setMaxSize(200,400);
         // Create the Scene
