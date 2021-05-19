@@ -52,6 +52,14 @@ public class Hall {
     
     public String displayStudents(){
         String result = "\n";
+        for(int counter = 0; counter < hallsToStay.size(); counter++){
+            result += hallsToStay.get(counter).getForeName() + "\t" + hallsToStay.get(counter).getSurname();
+            result += "\n" + hallsToStay.get(counter).getGender() + "\t" + hallsToStay.get(counter).getAddress();
+            result += "\n" + hallsToStay.get(counter).getNationality() + hallsToStay.get(counter).getDateOfBirth();
+            result += "\n" + hallsToStay.get(counter).getPhoneNum() + "\t" + hallsToStay.get(counter).getID();
+            result += "\n" + hallsToStay.get(counter).getHealthConditions();
+            result += "\n\n";
+        }
         return result;
     }
 }
