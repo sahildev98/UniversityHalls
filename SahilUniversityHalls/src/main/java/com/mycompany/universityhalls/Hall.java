@@ -26,7 +26,7 @@ public class Hall {
      * @return true if bike is added and false otherwise.
      */
     public boolean addStudent(Student theStudent) {
-        if (isFull()) {
+        if (!isFull()) {
             hallsToStay.add(theStudent);
             return true;
 
@@ -48,5 +48,10 @@ public class Hall {
      */
     public boolean isFull(){
         return hallsToStay.size()==MAX;
+    }
+    
+    public String displayStudents(){
+        String result = "\n";
+        return output;
     }
 }
