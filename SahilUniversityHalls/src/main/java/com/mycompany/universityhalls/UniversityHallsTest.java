@@ -80,7 +80,16 @@ public class UniversityHallsTest extends Application {
     }
     
     private void addButton(){
-        
+        String forename = forenameField.getText();
+        String surname = surnameField.getText();
+        String gender = genderField.getText();
+        String dob = dobField.getText();
+        String address = addressField.getText();
+        String phone = phoneNumField.getText();
+        String national = nationalField.getText();
+        String studyDate = studyDateField.getText();
+        String id = idField.getText();
+        String health = healthField.getText();
         
     }
     public static void main(String[] args) {
