@@ -78,7 +78,11 @@ public class UniversityHallsTest extends Application {
         stage.setTitle("SA Student Halls");
        stage.show();
     }
-
+    
+    private void addButton(){
+        
+        
+    }
     public static void main(String[] args) {
         launch();
     }
