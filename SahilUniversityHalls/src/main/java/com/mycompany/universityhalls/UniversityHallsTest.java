@@ -7,6 +7,7 @@ import javafx.scene.Scene;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.Separator;
 import javafx.scene.control.TextArea;
@@ -44,12 +45,15 @@ public class UniversityHallsTest extends Application {
     private TextField idField = new TextField();
     private Label healthLbl = new Label("Health Conditions");
     private TextArea healthField = new TextArea();
+//    private Label hallChoice = new Label("Decide which hall you require? \n vegan hall  \n non-vegan hall \n disabled hall? ");
+    private Button addBtn = new Button("Add Student to hall");
     private Separator sectSepator = new Separator(); 
     private Separator sectSepator2 = new Separator();
     private Separator sectSepator3 = new Separator();   
     @Override
     public void start(Stage stage) throws IOException {
         hallsToStay = new Hall(20);
+        
         // horizontal boxes for student details and hall details
         HBox studentDetails = new HBox(10);
         HBox studentDetails2 = new HBox(10);
@@ -63,7 +67,7 @@ public class UniversityHallsTest extends Application {
         VBox root = new VBox(10);
         // add nodes to the VBox
         root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,
-        studentDetails3,sectSepator3,hallLbl);
+        studentDetails3,sectSepator3,hallLbl,addBtn);
         // set min and max to componenents in GUI
         addressField.setMaxSize(200,400);
         healthField.setMaxSize(200,400);
@@ -72,7 +76,7 @@ public class UniversityHallsTest extends Application {
         // set scene with title and with stage used to display application
         stage.setScene(scene);
         stage.setTitle("SA Student Halls");
-       stage.show(); 
+       stage.show();
     }
 
     public static void main(String[] args) {
