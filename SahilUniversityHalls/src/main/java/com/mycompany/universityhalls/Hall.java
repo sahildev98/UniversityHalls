@@ -52,6 +52,6 @@ public class Hall {
     
     public String displayStudents(){
         String result = "\n";
-        return output;
+        return result;
     }
 }
