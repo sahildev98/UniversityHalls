@@ -63,7 +63,7 @@ public abstract class Person {
         newGender = gender;
     }
     
-    public String address(){
+    public String getAddress(){
         return address;
     }
     
