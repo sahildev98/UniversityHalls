@@ -33,5 +33,6 @@ public class Student extends Person {
         newDate = yearOfStudy;
         SimpleDateFormat firstYearFormat = new SimpleDateFormat("yyyy");
         SimpleDateFormat secondYearFormat = new SimpleDateFormat("yyyy");
+        String studyString = firstYearFormat.format(yearOfStudy) + " " + secondYearFormat.format(yearOfStudy);
     }
 }
