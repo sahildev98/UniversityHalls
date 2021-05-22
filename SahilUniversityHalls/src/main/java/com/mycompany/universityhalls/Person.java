@@ -7,6 +7,8 @@ package com.mycompany.universityhalls;
 
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Calendar;
 import java.util.Date;
 
@@ -22,18 +24,18 @@ public abstract class Person {
     private String gender;
     private String address;
     private String nationality;
-    private Date dateOfBirth;
+    private LocalDate dateOfBirth;
     private String phoneNum;
     private int ID;
     private String healthConditions;
-     // Constructor is a method used to initiaise objects i.e students entering details. 
-    public Person(String forename,String surname,String gender, String address, String nationality, Date dateOfbirth, String phoneNum, int ID, String healthConditions){
+     // Constructor is a method used to initiaise objects i.e students/employees entering details. 
+    public Person(String forename,String surname,String gender, String address, String nationality, int theYear, int theMonth, int theDay, String phoneNum, int ID, String healthConditions){
         this.forename = forename;
         this.surname = surname;
         this.gender = gender;
         this.address = address;
         this.nationality = nationality;
-        this.dateOfBirth = dateOfbirth;
+        dateOfBirth = LocalDate.of(theYear, theMonth, theDay);
         this.phoneNum = phoneNum;
         this.ID = ID;
         this.healthConditions = healthConditions;
@@ -79,11 +81,13 @@ public abstract class Person {
         newNationality = nationality;
     }
     
-    public Date getDateOfBirth(){
-        return dateOfBirth;
+    public String getDateOfBirth(){
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+        String formattedDate = dateOfBirth.format(myFormatObj);
+        return formattedDate;
     }
     
-    public void setDateOfBirth(Date newDateOfBirth){
+    public void setDateOfBirth(LocalDate newDateOfBirth){
         newDateOfBirth = dateOfBirth;
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
         String dateOfString = sdf.format(dateOfBirth);
