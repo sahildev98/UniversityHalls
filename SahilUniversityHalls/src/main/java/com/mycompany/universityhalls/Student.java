@@ -6,6 +6,7 @@
 package com.mycompany.universityhalls;
 
 import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.Date;
 
 /**
@@ -13,7 +14,7 @@ import java.util.Date;
  * @author Sahil
  */
 public class Student extends Person {
-    private Date yearOfStudy;
+    private LocalDate yearOfStudy;
     public Student(String forename, String surname, String gender, String address, String nationality, Date yearOfStudy, int theYear, int theMonth, int theDay, String phoneNum, int ID, String healthConditions) {
         super(forename, surname, gender, address, nationality, theYear, theMonth, theDay, phoneNum, ID, healthConditions);
     }
