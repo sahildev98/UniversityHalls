@@ -87,7 +87,7 @@ public abstract class Person {
         return formattedDate;
     }
     
-    public void setDateOfBirth(LocalDate newDateOfBirth){
+    public void setDateOfBirth(int theYear, int theMonth, int theDay){
         
     }
     
