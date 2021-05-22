@@ -88,9 +88,7 @@ public abstract class Person {
     }
     
     public void setDateOfBirth(LocalDate newDateOfBirth){
-        newDateOfBirth = dateOfBirth;
-        SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        String dateOfString = sdf.format(dateOfBirth);
+        
     }
     
     public String getPhoneNum(){
