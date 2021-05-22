@@ -88,7 +88,7 @@ public abstract class Person {
     }
     
     public void setDateOfBirth(int theYear, int theMonth, int theDay){
-        
+        dateOfBirth = LocalDate.of(theYear, theMonth, theDay);
     }
     
     public String getPhoneNum(){
