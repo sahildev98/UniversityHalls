@@ -14,8 +14,8 @@ import java.util.Date;
  */
 public class Student extends Person {
     private Date yearOfStudy;
-    public Student(String forename, String surname, String gender, String address, String nationality, Date yearOfStudy, Date dateOfbirth, String phoneNum, int ID, String healthConditions) {
-        super(forename, surname, gender, address, nationality, dateOfbirth, phoneNum, ID, healthConditions);
+    public Student(String forename, String surname, String gender, String address, String nationality, Date yearOfStudy, int theYear, int theMonth, int theDay, String phoneNum, int ID, String healthConditions) {
+        super(forename, surname, gender, address, nationality, theYear, theMonth, theDay, phoneNum, ID, healthConditions);
     }
         /**
      *
