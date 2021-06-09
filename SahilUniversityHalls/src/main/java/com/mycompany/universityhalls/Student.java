@@ -7,33 +7,34 @@ package com.mycompany.universityhalls;
 
 import java.text.SimpleDateFormat;
 import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
-/**
- *
- * @author Sahil
- */
+// Class extends to Person class to acheive abstract inheritance. 
 public class Student extends Person {
     private LocalDate yearOfStudy;
-    public Student(String forename, String surname, String gender, String address, String nationality, Date yearOfStudy, int theYear, int theMonth, int theDay, String phoneNum, int ID, String healthConditions) {
+    public Student(String forename, String surname, String gender, String address, String nationality, int theYear, int theMonth, int theDay, String phoneNum, int ID, String healthConditions, int theYearOfStudy,int monthOfStudy,int dayOfStudy) {
         super(forename, surname, gender, address, nationality, theYear, theMonth, theDay, phoneNum, ID, healthConditions);
+        yearOfStudy = LocalDate.of(theYearOfStudy, monthOfStudy, dayOfStudy);
     }
         /**
      *
-     * @return the date of study. 
+     * @return the date of study as a string. 
      */
-    public Date getDate(){
-        return yearOfStudy;
+    public String getDate(){
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
+        String formattedDate = yearOfStudy.format(myFormatObj);
+        return formattedDate;
     }
     
     /**
-     *
-     * @param newDate for setting the yearOfStudy date when creating a object for this class.  
+     *  
+     * @param theYearOfStudy
+     * @param monthOfStudy
+     * @param dayOfStudy
      */
-    public void setDate(Date newDate){
-        newDate = yearOfStudy;
-        SimpleDateFormat firstYearFormat = new SimpleDateFormat("yyyy");
-        SimpleDateFormat secondYearFormat = new SimpleDateFormat("yyyy");
-        String studyString = firstYearFormat.format(yearOfStudy) + " " + secondYearFormat.format(yearOfStudy);
+    public void setDate( int theYearOfStudy,int monthOfStudy,int dayOfStudy){
+       yearOfStudy = LocalDate.of(theYearOfStudy, monthOfStudy, dayOfStudy);
+
     }
 }

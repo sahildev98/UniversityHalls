@@ -45,7 +45,8 @@ public class UniversityHallsTest extends Application {
     private TextField idField = new TextField();
     private Label healthLbl = new Label("Health Conditions");
     private TextArea healthField = new TextArea();
-//    private Label hallChoice = new Label("Decide which hall you require? \n vegan hall  \n non-vegan hall \n disabled hall? ");
+    private Label hallLbl2 = new Label("Decide which hall you require? \n vegan hall  \n non-vegan hall \n disabled hall? ");
+    private TextField hallField = new TextField();
     private Button addBtn = new Button("Add Student to hall");
     private Separator sectSepator = new Separator(); 
     private Separator sectSepator2 = new Separator();
@@ -63,35 +64,59 @@ public class UniversityHallsTest extends Application {
         studentDetails.getChildren().addAll(forenameLbl,forenameField,surnamelbl,surnameField,studentGender,genderField);
         studentDetails2.getChildren().addAll(dobLbl,dobField,studentAddress,addressField,phoneNumLbl,phoneNumField,nationalLbl,nationalField);
         studentDetails3.getChildren().addAll(studyDateLbl,studyDateField,idLbl,idField,healthLbl,healthField);
+        hallDetails.getChildren().addAll(hallLbl2,hallField);
         // Vbox Created
         VBox root = new VBox(10);
         // add nodes to the VBox
         root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,
-        studentDetails3,sectSepator3,hallLbl,addBtn);
+        studentDetails3,sectSepator3,hallLbl,hallDetails,addBtn);
         // set min and max to componenents in GUI
         addressField.setMaxSize(200,400);
         healthField.setMaxSize(200,400);
         // Create the Scene
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
+//        addBtn.setOnAction(e -> addStudentButton());
+        
         stage.setScene(scene);
         stage.setTitle("SA Student Halls");
        stage.show();
     }
     
-    private void addButton(){
-        String forename = forenameField.getText();
-        String surname = surnameField.getText();
-        String gender = genderField.getText();
-        String dob = dobField.getText();
-        String address = addressField.getText();
-        String phone = phoneNumField.getText();
-        String national = nationalField.getText();
-        String studyDate = studyDateField.getText();
-        String id = idField.getText();
-        String health = healthField.getText();
+//    private void addStudentButton(){
+//        String forename = forenameField.getText();
+//        String surname = surnameField.getText();
+//        String gender = genderField.getText();
+//        String dbDay = dobField.getText();
+//        int dbDayNum = Integer.valueOf(dbDay);
+//        int dateDayNum = dbDayNum;
+//        String dbMonth = dobField.getText();
+//        int dbMonthNum = Integer.valueOf(dbMonth);
+//        int dateMonthNum = dbMonthNum;
+//        String dbYear = dobField.getText();
+//        int dbYearNum = Integer.valueOf(dbYear);
+//        int dateYearNum = dbYearNum;
+//        String address = addressField.getText();
+//        String phone = phoneNumField.getText();
+//        String national = nationalField.getText();
+//        String id = idField.getText();
+//        int numId = Integer.valueOf(id);
+//        int sendID = numId;
+//        String health = healthField.getText();
+//        String studyDay = studyDateField.getText();
+//        int studyDayNum = Integer.valueOf(studyDay);
+//        int newStuDayNum = studyDayNum;
+//        String studyMonth = studyDateField.getText();
+//        int studyMonthNum = Integer.valueOf(studyMonth);
+//        int newStudyMonthNum = studyMonthNum;
+//        String studyYear = studyDateField.getText();
+//        int studyYearNum = Integer.valueOf(studyYear);
+//        int newStudyYearNum = studyYearNum;
+//        Student studentAdd = new Student(forename,surname, gender,dateYearNum,dateMonthNum,dateDayNum, address, phone, national, 
+//        sendID, health, newStudyYearNum, newStudyMonthNum, newStuDayNum);
+//        hallsToStay.addStudent(studentAdd);
         
-    }
+//    }
     public static void main(String[] args) {
         launch();
     }
