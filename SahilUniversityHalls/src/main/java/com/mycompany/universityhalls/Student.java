@@ -22,9 +22,9 @@ public class Student extends Person {
      * @return the date of study as a string. 
      */
     public String getDate(){
-        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
-        String formattedDate = yearOfStudy.format(myFormatObj);
-        return formattedDate;
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        return yearOfStudy.format(myFormatObj);
+        
     }
     
     /**
