@@ -82,9 +82,8 @@ public abstract class Person {
     }
     
     public String getDateOfBirth(){
-        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MMM-yyyy");
-        String formattedDate = dateOfBirth.format(myFormatObj);
-        return formattedDate;
+        DateTimeFormatter myFormatObj = DateTimeFormatter.ofPattern("dd-MM-yyyy");
+        return dateOfBirth.format(myFormatObj);
     }
     
     public void setDateOfBirth(int theYear, int theMonth, int theDay){
