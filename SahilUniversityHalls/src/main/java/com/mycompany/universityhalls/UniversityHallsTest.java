@@ -159,7 +159,16 @@ public class UniversityHallsTest extends Application {
         }
         Student studentAdd = new Student(forename, surname, gender, address, national, dbYearNum, dbMonthNum, dbDayNum,
         phone, numId, health, studyYearNum, studyMonthNum, studyDayNum);
-        
+        forenameField.setText("");
+        surnameField.setText("");
+        genderField.setText("");
+        dobField.setText("");
+        addressField.setText("");
+        phoneNumField.setText("");
+        nationalField.setText("");
+        idField.setText("");
+        healthField.setText("");
+        studyDateField.setText("");
         hallsToStay.addStudent(studentAdd);
         
     }
