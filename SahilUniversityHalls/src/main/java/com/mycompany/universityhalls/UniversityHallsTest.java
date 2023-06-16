@@ -131,6 +131,12 @@ public class UniversityHallsTest extends Application {
         };
     
     private void addStudentButton(){
+        
+        if(!validateFields()){
+        // fields are not valid, update the displayStudent textarea
+        displayStudents.setText("Please fill in the required fields");
+        return;
+        }
         String forename = forenameField.getText();
         String surname = surnameField.getText();
         String gender = genderField.getText();
@@ -152,25 +158,20 @@ public class UniversityHallsTest extends Application {
         int studyMonthNum = Integer.parseInt(studyMonth);
         String studyYear = studyDateField.getText();
         int studyYearNum = Integer.parseInt(studyYear);
-        if(!validateFields()){
-        // fields are not valid, update the displayStudent textarea
-        displayStudents.setText("Please fill in the required fields");
-        return;
-        }
         Student studentAdd = new Student(forename, surname, gender, address, national, dbYearNum, dbMonthNum, dbDayNum,
         phone, numId, health, studyYearNum, studyMonthNum, studyDayNum);
         hallsToStay.addStudent(studentAdd);
-        forenameField.setText("");
-        surnameField.setText("");
-        genderField.setText("");
-        dobField.setText("");
-        addressField.setText("");
-        phoneNumField.setText("");
-        nationalField.setText("");
-        idField.setText("");
-        healthField.setText("");
-        studyDateField.setText("");
-        displayStudents.appendText(forename + " has been successfully into " + hallsToStay);
+//        forenameField.setText("");
+//        surnameField.setText("");
+//        genderField.setText("");
+//        dobField.setText("");
+//        addressField.setText("");
+//        phoneNumField.setText("");
+//        nationalField.setText("");
+//        idField.setText("");
+//        healthField.setText("");
+//        studyDateField.setText("");
+        displayStudents.appendText(forename + " has been successfully into ");
         displayStudents.appendText(hallsToStay.displayStudents());
         
         
