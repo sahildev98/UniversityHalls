@@ -70,7 +70,7 @@ public class UniversityHallsTest extends Application {
         VBox root = new VBox(10);
         // add nodes to the VBox
         root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,
-        studentDetails3,sectSepator3,hallLbl,hallDetails,addBtn);
+        studentDetails3,sectSepator3,hallLbl,hallDetails,addBtn, displayStudents);
         // set min and max to componenents in GUI
         addressField.setMaxSize(200,400);
         healthField.setMaxSize(200,400);
@@ -78,6 +78,7 @@ public class UniversityHallsTest extends Application {
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
         addBtn.setOnAction(e -> addStudentButton());
+        displayStudents.setMaxSize(400, 700);
         
         stage.setScene(scene);
         stage.setTitle("SA Student Halls");
