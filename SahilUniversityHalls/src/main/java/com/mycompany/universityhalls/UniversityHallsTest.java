@@ -152,8 +152,14 @@ public class UniversityHallsTest extends Application {
         int studyMonthNum = Integer.parseInt(studyMonth);
         String studyYear = studyDateField.getText();
         int studyYearNum = Integer.parseInt(studyYear);
+        if(!validateFields()){
+        // fields are not valid, update the displayStudent textarea
+        displayStudents.setText("Please fill in the required fields");
+        return;
+        }
         Student studentAdd = new Student(forename, surname, gender, address, national, dbYearNum, dbMonthNum, dbDayNum,
-            phone, numId, health, studyYearNum, studyMonthNum, studyDayNum);
+        phone, numId, health, studyYearNum, studyMonthNum, studyDayNum);
+        
         hallsToStay.addStudent(studentAdd);
         
     }
