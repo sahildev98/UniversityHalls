@@ -80,8 +80,14 @@ public class UniversityHallsTest extends Application {
         
         stage.setScene(scene);
         stage.setTitle("SA Student Halls");
-       stage.show();
+       stage.show();   
     }
+    
+        // check for errors
+        private boolean validateFields(){
+          StringBuilder errorMessages = new StringBuilder();
+          return false;
+        };
     
     private void addStudentButton(){
         String forename = forenameField.getText();
