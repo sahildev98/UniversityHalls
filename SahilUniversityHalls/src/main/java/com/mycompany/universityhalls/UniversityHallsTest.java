@@ -48,6 +48,7 @@ public class UniversityHallsTest extends Application {
     private Label hallLbl2 = new Label("Decide which hall you require? \n vegan hall  \n non-vegan hall \n disabled hall? ");
     private TextField hallField = new TextField();
     private Button addBtn = new Button("Add Student to hall");
+    private TextArea displayStudents = new TextArea();
     private Separator sectSepator = new Separator(); 
     private Separator sectSepator2 = new Separator();
     private Separator sectSepator3 = new Separator();   
