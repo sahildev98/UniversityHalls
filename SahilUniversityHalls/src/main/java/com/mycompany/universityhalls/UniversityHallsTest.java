@@ -87,44 +87,47 @@ public class UniversityHallsTest extends Application {
     
         // check for errors
         private boolean validateFields(){
-          StringBuilder errorMessages = new StringBuilder();
-          
+          String errorMessages = "";
           if(forenameField.getText().isEmpty()){
-            errorMessages.append("Forename is required.\n");
+            errorMessages+= "Forename is required.\n";
         }
           if(surnameField.getText().isEmpty()){
-            errorMessages.append("Surname is required.\n");
+            errorMessages+= "Surname is required.\n";
         }
           if(genderField.getText().isEmpty()){
-            errorMessages.append("Gender is required.\n");
+            errorMessages+= "Gender is required.\n";
         }
           if(dobField.getText().isEmpty()){
-            errorMessages.append("Date Of birth is required.\n");
+            errorMessages+= "Date Of birth is required.\n";
           }
           
           if(addressField.getText().isEmpty()){
-            errorMessages.append("Address is required.\n");
+            errorMessages += "Address is required.\n";
           }
           
            if(phoneNumField.getText().isEmpty()){
-            errorMessages.append("Phone number is required.\n");
+            errorMessages += "Phone number is required.\n";
           }
            if(nationalField.getText().isEmpty()){
-            errorMessages.append("Nationality Field is required.\n");
+            errorMessages += "Nationality Field is required.\n";
           }
            if(idField.getText().isEmpty()){
-            errorMessages.append("ID field is required.\n");
+            errorMessages += "ID field is required.\n";
           }
            if(healthField.getText().isEmpty()){
-            errorMessages.append("Health Field is required.\n");
+            errorMessages += "Health Field is required.\n";
           }
            if(studyDateField.getText().isEmpty()){
-            errorMessages.append("Study date is required.\n");
+            errorMessages += "Study date is required.\n";
           }
+           if(errorMessages.isEmpty()){
+               displayStudents.setText(errorMessages);
+               return false;
+           }
            
           
           
-          return false;
+          return true;
         };
     
     private void addStudentButton(){
