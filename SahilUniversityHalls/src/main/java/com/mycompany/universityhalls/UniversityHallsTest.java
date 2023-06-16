@@ -76,47 +76,40 @@ public class UniversityHallsTest extends Application {
         // Create the Scene
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
-//        addBtn.setOnAction(e -> addStudentButton());
+        addBtn.setOnAction(e -> addStudentButton());
         
         stage.setScene(scene);
         stage.setTitle("SA Student Halls");
        stage.show();
     }
     
-//    private void addStudentButton(){
-//        String forename = forenameField.getText();
-//        String surname = surnameField.getText();
-//        String gender = genderField.getText();
-//        String dbDay = dobField.getText();
-//        int dbDayNum = Integer.valueOf(dbDay);
-//        int dateDayNum = dbDayNum;
-//        String dbMonth = dobField.getText();
-//        int dbMonthNum = Integer.valueOf(dbMonth);
-//        int dateMonthNum = dbMonthNum;
-//        String dbYear = dobField.getText();
-//        int dbYearNum = Integer.valueOf(dbYear);
-//        int dateYearNum = dbYearNum;
-//        String address = addressField.getText();
-//        String phone = phoneNumField.getText();
-//        String national = nationalField.getText();
-//        String id = idField.getText();
-//        int numId = Integer.valueOf(id);
-//        int sendID = numId;
-//        String health = healthField.getText();
-//        String studyDay = studyDateField.getText();
-//        int studyDayNum = Integer.valueOf(studyDay);
-//        int newStuDayNum = studyDayNum;
-//        String studyMonth = studyDateField.getText();
-//        int studyMonthNum = Integer.valueOf(studyMonth);
-//        int newStudyMonthNum = studyMonthNum;
-//        String studyYear = studyDateField.getText();
-//        int studyYearNum = Integer.valueOf(studyYear);
-//        int newStudyYearNum = studyYearNum;
-//        Student studentAdd = new Student(forename,surname, gender,dateYearNum,dateMonthNum,dateDayNum, address, phone, national, 
-//        sendID, health, newStudyYearNum, newStudyMonthNum, newStuDayNum);
-//        hallsToStay.addStudent(studentAdd);
+    private void addStudentButton(){
+        String forename = forenameField.getText();
+        String surname = surnameField.getText();
+        String gender = genderField.getText();
+        String dbDay = dobField.getText();
+        int dbDayNum = Integer.parseInt(dbDay);
+        String dbMonth = dobField.getText();
+        int dbMonthNum = Integer.parseInt(dbMonth);
+        String dbYear = dobField.getText();
+        int dbYearNum = Integer.parseInt(dbYear);
+        String address = addressField.getText();
+        String phone = phoneNumField.getText();
+        String national = nationalField.getText();
+        String id = idField.getText();
+        int numId = Integer.parseInt(id);
+        String health = healthField.getText();
+        String studyDay = studyDateField.getText();
+        int studyDayNum = Integer.parseInt(studyDay);
+        String studyMonth = studyDateField.getText();
+        int studyMonthNum = Integer.parseInt(studyMonth);
+        String studyYear = studyDateField.getText();
+        int studyYearNum = Integer.parseInt(studyYear);
+        Student studentAdd = new Student(forename, surname, gender, address, national, dbYearNum, dbMonthNum, dbDayNum,
+            phone, numId, health, studyYearNum, studyMonthNum, studyDayNum);
+        hallsToStay.addStudent(studentAdd);
         
-//    }
+    }
     public static void main(String[] args) {
         launch();
     }
