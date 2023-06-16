@@ -159,6 +159,7 @@ public class UniversityHallsTest extends Application {
         }
         Student studentAdd = new Student(forename, surname, gender, address, national, dbYearNum, dbMonthNum, dbDayNum,
         phone, numId, health, studyYearNum, studyMonthNum, studyDayNum);
+        hallsToStay.addStudent(studentAdd);
         forenameField.setText("");
         surnameField.setText("");
         genderField.setText("");
@@ -169,7 +170,9 @@ public class UniversityHallsTest extends Application {
         idField.setText("");
         healthField.setText("");
         studyDateField.setText("");
-        hallsToStay.addStudent(studentAdd);
+        displayStudents.appendText(forename + " has been successfully into " + hallsToStay);
+        displayStudents.appendText(hallsToStay.displayStudents());
+        
         
     }
     public static void main(String[] args) {
