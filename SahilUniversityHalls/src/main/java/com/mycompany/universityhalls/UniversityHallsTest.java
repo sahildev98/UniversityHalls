@@ -86,6 +86,42 @@ public class UniversityHallsTest extends Application {
         // check for errors
         private boolean validateFields(){
           StringBuilder errorMessages = new StringBuilder();
+          
+          if(forenameField.getText().isEmpty()){
+            errorMessages.append("Forename is required.\n");
+        }
+          if(surnameField.getText().isEmpty()){
+            errorMessages.append("Surname is required.\n");
+        }
+          if(genderField.getText().isEmpty()){
+            errorMessages.append("Gender is required.\n");
+        }
+          if(dobField.getText().isEmpty()){
+            errorMessages.append("Date Of birth is required.\n");
+          }
+          
+          if(addressField.getText().isEmpty()){
+            errorMessages.append("Address is required.\n");
+          }
+          
+           if(phoneNumField.getText().isEmpty()){
+            errorMessages.append("Phone number is required.\n");
+          }
+           if(nationalField.getText().isEmpty()){
+            errorMessages.append("Nationality Field is required.\n");
+          }
+           if(idField.getText().isEmpty()){
+            errorMessages.append("ID field is required.\n");
+          }
+           if(healthField.getText().isEmpty()){
+            errorMessages.append("Health Field is required.\n");
+          }
+           if(studyDateField.getText().isEmpty()){
+            errorMessages.append("Study date is required.\n");
+          }
+           
+          
+          
           return false;
         };
     
