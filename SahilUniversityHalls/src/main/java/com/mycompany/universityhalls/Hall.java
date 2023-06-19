@@ -50,6 +50,22 @@ public class Hall {
         return hallsToStay.size()==MAX;
     }
     
+    public int getTotal(){
+        return hallsToStay.size();
+    }
+    
+    public Student getStudent(int positionIn){
+        if(positionIn < 0 || positionIn >= getTotal())
+        { 
+            return null;
+        } 
+        else
+        {
+            return hallsToStay.get(positionIn);
+        }
+    
+    }
+    
     public String displayStudents(){
         String result = "\n";
         for(int counter = 0; counter < hallsToStay.size(); counter++){
