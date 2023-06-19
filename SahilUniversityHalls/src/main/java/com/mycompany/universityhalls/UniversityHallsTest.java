@@ -48,7 +48,7 @@ public class UniversityHallsTest extends Application {
     private Label hallLbl2 = new Label("Decide which hall you require? \n vegan hall  \n non-vegan hall \n disabled hall? ");
     private TextField hallField = new TextField();
     private Button addBtn = new Button("Add Student to hall");
-    private TextArea displayStudents = new TextArea();
+    private TextArea showStudents = new TextArea();
     private Separator sectSepator = new Separator(); 
     private Separator sectSepator2 = new Separator();
     private Separator sectSepator3 = new Separator();   
@@ -70,7 +70,7 @@ public class UniversityHallsTest extends Application {
         VBox root = new VBox(10);
         // add nodes to the VBox
         root.getChildren().addAll(headingLbl,sectSepator,studentLbl,studentDetails,sectSepator2,studentDetails2,
-        studentDetails3,sectSepator3,hallLbl,hallDetails,addBtn, displayStudents);
+        studentDetails3,sectSepator3,hallLbl,hallDetails,addBtn, showStudents);
         // set min and max to componenents in GUI
         addressField.setMaxSize(200,400);
         healthField.setMaxSize(200,400);
@@ -78,7 +78,7 @@ public class UniversityHallsTest extends Application {
         Scene scene = new Scene(root, Color.web("#ffffff"));
         // set scene with title and with stage used to display application
         addBtn.setOnAction(e -> addStudentButton());
-        displayStudents.setMaxSize(400, 700);
+        showStudents.setMaxSize(400, 700);
         
         stage.setScene(scene);
         stage.setTitle("SA Student Halls");
@@ -89,7 +89,7 @@ public class UniversityHallsTest extends Application {
         private boolean validateFields(){
           String errorMessages = "";
           if(forenameField.getText().isEmpty()){
-            errorMessages+= "Forename is required.\n";
+            errorMessages += "Forename is required.\n";
         }
           if(surnameField.getText().isEmpty()){
             errorMessages+= "Surname is required.\n";
@@ -120,8 +120,8 @@ public class UniversityHallsTest extends Application {
            if(studyDateField.getText().isEmpty()){
             errorMessages += "Study date is required.\n";
           }
-           if(errorMessages.isEmpty()){
-               displayStudents.setText(errorMessages);
+           if(!errorMessages.isEmpty()){
+               showStudents.setText(errorMessages);
                return false;
            }
            
@@ -131,10 +131,10 @@ public class UniversityHallsTest extends Application {
         };
     
     private void addStudentButton(){
-        
+      
         if(!validateFields()){
         // fields are not valid, update the displayStudent textarea
-        displayStudents.setText("Please fill in the required fields");
+        showStudents.setText("Please fill in the required fields");
         return;
         }
         String forename = forenameField.getText();
@@ -158,26 +158,34 @@ public class UniversityHallsTest extends Application {
         int studyMonthNum = Integer.parseInt(studyMonth);
         String studyYear = studyDateField.getText();
         int studyYearNum = Integer.parseInt(studyYear);
+   
         Student studentAdd = new Student(forename, surname, gender, address, national, dbYearNum, dbMonthNum, dbDayNum,
         phone, numId, health, studyYearNum, studyMonthNum, studyDayNum);
-        hallsToStay.addStudent(studentAdd);
-//        forenameField.setText("");
-//        surnameField.setText("");
-//        genderField.setText("");
-//        dobField.setText("");
-//        addressField.setText("");
-//        phoneNumField.setText("");
-//        nationalField.setText("");
-//        idField.setText("");
-//        healthField.setText("");
-//        studyDateField.setText("");
-        displayStudents.appendText(forename + " has been successfully into ");
-        displayStudents.appendText(hallsToStay.displayStudents());
+        System.out.println("Add Student btn clicked!");
+        boolean added = hallsToStay.addStudent(studentAdd);
+        if(added){
+            showStudents.setText("Students added succesfully tot the hall");
+            
+        } else {
+            showStudents.setText("The hall is full. Student cannot be added");
+        }
+        forenameField.clear();
+        surnameField.clear();
+        genderField.clear();
+        dobField.clear();
+        addressField.clear();
+        phoneNumField.clear();
+        nationalField.clear();
+        idField.clear();
+        healthField.clear();
+        studyDateField.clear();
+//        displayStudents.appendText(forename + " has been successfully into ");
+        showStudents.appendText(hallsToStay.displayStudents());
         
         
     }
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 
 }
